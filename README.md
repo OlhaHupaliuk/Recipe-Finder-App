@@ -1,9 +1,6 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
-
-
-
 1. git clone https://github.com/your-username/recipe-search-app.git
 cd recipe-search-app
 2. Set Environment Variables: Create a .env.local file in the root directory and add your Spoonacular API key:
@@ -22,10 +19,13 @@ bun dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-4. 
-Architecture
+![image](https://github.com/user-attachments/assets/99e67550-3cf4-4256-a86f-1e32818de667)
 
-Components:
+![image](https://github.com/user-attachments/assets/d495f650-7282-47e2-8b46-76c4373a7913)
+
+![image](https://github.com/user-attachments/assets/9b84e91e-ea9d-4894-bd90-aa1748718f67)
+
+4. Components:
 
 Home (app/page.tsx): Client component with a search form (SearchCard) for inputting query, cuisine, and time.
 
