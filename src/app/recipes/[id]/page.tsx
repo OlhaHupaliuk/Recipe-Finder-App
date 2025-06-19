@@ -4,7 +4,7 @@ interface RecipeDetailsProps {
   params: { id: string };
 }
 async function RecipeDetailsContent({ params }: RecipeDetailsProps) {
-  const { id } = params;
+  const { id } = await params;
   const apiKey = process.env.SPOONACULAR_API_KEY;
 
   const url = new URL(`https://api.spoonacular.com/recipes/${id}/information`);
