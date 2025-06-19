@@ -2,7 +2,14 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+
+
+1. git clone https://github.com/your-username/recipe-search-app.git
+cd recipe-search-app
+2. Set Environment Variables: Create a .env.local file in the root directory and add your Spoonacular API key:
+SPOONACULAR_API_KEY=your-api-key-here
+
+3. run the development server:
 
 ```bash
 npm run dev
@@ -13,12 +20,24 @@ pnpm dev
 # or
 bun dev
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. 
+Architecture
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Components:
+
+Home (app/page.tsx): Client component with a search form (SearchCard) for inputting query, cuisine, and time.
+
+SearchCard (components/SearchCard.tsx): Form with inputs and a "Find Recipes" button, enabled only when at least one field is filled.
+
+RecipesPage (app/recipes/page.tsx): Server component fetching recipe results from Spoonacular API, wrapped in Suspense.
+
+RecipeCard (components/RecipeCard.tsx): Displays individual recipe with image and title, navigates to details page on click.
+
+RecipeDetails (app/recipes/[id]/page.tsx): Dynamic route for detailed recipe info, also using Suspense.
+
+
 
 ## Learn More
 
